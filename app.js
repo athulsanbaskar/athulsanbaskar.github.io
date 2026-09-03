@@ -55,7 +55,54 @@ directionalLight.position.set(5, 5, 5);
 scene.add(directionalLight);
 
 
+// -------------------------
+// CREATE ATOM
+// -------------------------
+
+function createAtom(element, x, y, z) {
+
+  const radius = elementRadii[element] || 0.35;
+
+  const color = elementColors[element] || 0x888888;
+
+  const geometry = new THREE.SphereGeometry(
+    radius,
+    32,
+    32
+  );
+
+  const material = new THREE.MeshStandardMaterial({
+    color: color
+  });
+
+  const atom = new THREE.Mesh(
+    geometry,
+    material
+  );
+
+  atom.position.set(x, y, z);
+
+  // Store useful information on the atom
+  atom.userData.element = element;
+  atom.userData.x = x;
+  atom.userData.y = y;
+  atom.userData.z = z;
+
+  scene.add(atom);
+
+  return atom;
+}
+
+
+
+
+
+
+
 // Test atom
+
+
+
 
 const geometry = new THREE.SphereGeometry(
   1,

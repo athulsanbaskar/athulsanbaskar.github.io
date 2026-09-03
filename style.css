@@ -1,1 +1,55 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: #181818;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.file-button {
+  padding: 10px 16px;
+  background: #333;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.file-button input {
+  display: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  height: calc(100vh - 60px);
+}
+
+#viewer {
+  min-width: 0;
+}
+
+aside {
+  padding: 20px;
+  background: #1b1b1b;
+  border-left: 1px solid #333;
+}
+
+aside h2 {
+  margin-top: 0;
+}

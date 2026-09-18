@@ -1,55 +1,75 @@
- <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en">
-<header>
-  <link rel="stylesheet" href="header.css">
-  <h1>XYZ Viewer</h1>
 
-  <label class="file-button">
-    Open XYZ
-    <input id="xyz-file" type="file" accept=".xyz">
-  </label>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <nav>
-    <a href="3dviewer.html">Viewer</a>
-  </nav>
-</header>
- 
+    <title>XYZ Viewer</title>
 
-<body style="background-color:black;"> <!-- The overlay -->
-<div id="myNav" class="overlay">
+    <link rel="stylesheet" href="header.css">
+</head>
 
-  <!-- Button to close the overlay navigation -->
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<body>
 
-  <!-- Overlay content -->
-  <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
-  </div>
+    <header class="header">
+        <h1>XYZ Viewer</h1>
 
-</div>
+        <label class="file-button">
+            Open XYZ
+            <input id="xyz-file" type="file" accept=".xyz">
+        </label>
 
-<!-- Use any element to open/show the overlay navigation menu -->
-<span style="font-size:50px;cursor:pointer" onclick="openNav()">&#9770 </span>
+        <nav>
+            <a href="3dviewer.html">Viewer</a>
+        </nav>
 
-<script>
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-</script>
-<div class="header">
-  <h1>Melcow!</h1>
-  <p>A website created by me.</p>
-</div> 
+        <!-- Hamburger menu button -->
+        <button class="menu-button" onclick="openNav()" aria-label="Open menu">
+            &#9776;
+        </button>
+    </header>
 
 
+    <!-- Overlay navigation -->
+    <div id="myNav" class="overlay">
 
+        <!-- Close button -->
+        <button class="closebtn" onclick="closeNav()" aria-label="Close menu">
+            &times;
+        </button>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </div>
+
+
+    <main>
+        <section class="welcome">
+            <h2>Welcome!</h2>
+            <p>A website created by me.</p>
+        </section>
+    </main>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
 
 </body>
-</html> 
+
+</html>
+```

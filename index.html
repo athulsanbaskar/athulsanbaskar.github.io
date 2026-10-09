@@ -205,39 +205,98 @@
     }
 
     @media (max-width: 650px) {
-      .hero {
-        padding: 70px 0;
-      }
+    .page-frame {
+    margin: 6px;
+    min-height: calc(100vh - 12px);
+    border-radius: 12px;
+  }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+  .page-frame header {
+    background: #000000;
+    min-height: 64px;
+  }
 
-      section {
-        padding: 55px 0;
-      }
+  .page-frame nav {
+    min-height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
 
-      .menu-button {
-        display: block;
-      }
+  /* Make the logo visible */
+  .page-frame .logo {
+    display: inline-flex;
+    align-items: center;
+    color: #a78bfa;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 0;
+  }
 
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 22px 5%;
-        background: #000000;
-        border-bottom: 1px solid #e8eaf0;
-        flex-direction: column;
-        gap: 16px;
-      }
+  .page-frame .logo img {
+    display: block;
+    width: auto;
+    height: 40px;
+    max-width: 150px;
+    object-fit: contain;
+  }
 
-      .nav-links.open {
-        display: flex;
-      }
-    }
+  /* Keep the menu button visible */
+  .page-frame .menu-button {
+    display: block;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #7c3aed;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  /* Hide links until the menu is opened */
+  .page-frame .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: #080810;
+    border: 1px solid #7c3aed;
+    border-radius: 0 0 12px 12px;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 20;
+  }
+
+  .page-frame .nav-links.open {
+    display: flex;
+  }
+
+  .page-frame .nav-links a {
+    color: #ffffff;
+  }
+
+  .page-frame .nav-links a:hover {
+    color: #a78bfa;
+  }
+
+  .page-frame .hero {
+    padding: 60px 0;
+  }
+
+  .page-frame .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .page-frame section {
+    padding: 45px 0;
+  }
+
+  }
+    
   </style>
 </head>
 

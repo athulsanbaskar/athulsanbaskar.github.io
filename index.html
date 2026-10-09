@@ -204,99 +204,102 @@
       border-top: 1px solid #3b3f53;
     }
 
-    @media (max-width: 650px) {
-    .page-frame {
-    margin: 6px;
-    min-height: calc(100vh - 12px);
-    border-radius: 12px;
+  
+@media (max-width: 650px) {
+  .hero {
+    padding: 60px 0;
   }
 
-  .page-frame header {
-    background: #000000;
-    min-height: 64px;
+  .cards {
+    grid-template-columns: 1fr;
   }
 
-  .page-frame nav {
-    min-height: 64px;
+  section {
+    padding: 45px 0;
+  }
+
+  /* Mobile header */
+  header {
+    background: #000 !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav.container {
+    min-height: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    position: relative;
   }
 
-  /* Make the logo visible */
-  .page-frame .logo {
+  /* Logo */
+  .logo {
     display: inline-flex;
     align-items: center;
-    color: #a78bfa;
+    color: #a78bfa !important;
     font-size: 1.2rem;
     font-weight: bold;
-    min-width: 0;
+    text-decoration: none;
   }
 
-  .page-frame .logo img {
+  .logo img {
     display: block;
-    width: auto;
     height: 40px;
+    width: auto;
     max-width: 150px;
-    object-fit: contain;
   }
 
-  /* Keep the menu button visible */
-  .page-frame .menu-button {
+  /* Menu button */
+  .menu-button {
     display: block;
-    color: #ffffff;
-    background: transparent;
-    border: 1px solid #7c3aed;
+    color: #fff !important;
+    background: #111;
+    border: 1px solid #a855f7;
     border-radius: 8px;
-    padding: 5px 10px;
-    font-size: 1.5rem;
-    flex-shrink: 0;
+    padding: 5px 12px;
+    font-size: 24px;
+    cursor: pointer;
   }
 
-  /* Hide links until the menu is opened */
-  .page-frame .nav-links {
+  /* Navigation dropdown */
+  .nav-links {
     display: none;
     position: absolute;
-    top: 64px;
+    top: 70px;
     left: 0;
     right: 0;
+    background: #080808;
+    border: 1px solid #a855f7;
+    border-radius: 0 0 10px 10px;
     padding: 20px;
-    background: #080810;
-    border: 1px solid #7c3aed;
-    border-radius: 0 0 12px 12px;
     flex-direction: column;
-    gap: 16px;
-    z-index: 20;
+    gap: 18px;
+    list-style: none;
+    z-index: 101;
   }
 
-  .page-frame .nav-links.open {
+  .nav-links.open {
     display: flex;
   }
 
-  .page-frame .nav-links a {
-    color: #ffffff;
+  .nav-links a {
+    display: block;
+    color: #fff !important;
+    padding: 5px 0;
   }
 
-  .page-frame .nav-links a:hover {
-    color: #a78bfa;
+  .nav-links a:hover {
+    color: #a78bfa !important;
   }
 
-  .page-frame .hero {
-    padding: 60px 0;
+  .page-frame {
+    margin: 6px;
   }
-
-  .page-frame .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .page-frame section {
-    padding: 45px 0;
-  }
-
-  }
-    
+}
+ 
   </style>
 </head>
 

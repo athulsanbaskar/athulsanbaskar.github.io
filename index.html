@@ -46,9 +46,16 @@
     }
 
     .logo {
-      font-size: 1.35rem;
-      font-weight: bold;
-      color: #5b5ce2;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+      max-width: 180px;
+      object-fit: contain;
+      display: block;
     }
 
     .nav-links {
@@ -220,7 +227,8 @@
 <body>
   <header>
     <nav class="container">
-      <a href="#home" class="logo">Athul.</a>
+      <a href="#home" class="logo">
+         <img src="logo.png" alt="My Logo"></a>
 
       <button
         class="menu-button"
